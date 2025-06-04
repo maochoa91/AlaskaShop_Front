@@ -20,7 +20,7 @@ function GeneradorPanoleta() {
       const promptEnIngles = await traducirPrompt(prompt);
       const promptBase = "A triangular dog bandana, flat on a wooden table, with soft shadows, product style, high resolution. ";
       const promptFinal = promptBase + promptEnIngles;
-      const res = await fetch("http://localhost:5000/api/generar-imagen", {
+      const res = await fetch("https://alaskashop-backend.onrender.com/api/generar-imagen", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: promptFinal })
