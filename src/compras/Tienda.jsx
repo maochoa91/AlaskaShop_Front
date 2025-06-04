@@ -9,7 +9,7 @@ const Tienda = () => {
 
   useEffect(() => {
     // Asegúrate que el backend esté corriendo
-    axios.get('http://localhost:5000/api/productos')
+    axios.get('https://alaskashop-backend.onrender.com')
       .then(response => setProductos(response.data))
       .catch(error => console.error('Error al obtener productos:', error));
   }, []);
