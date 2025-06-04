@@ -1,0 +1,23 @@
+.app-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+.titulo {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.design-area1 {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Para que se adapte en pantallas pequeñas */ }

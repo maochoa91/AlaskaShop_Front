@@ -1,0 +1,87 @@
+.textoPregunta{
+            position: relative;
+            top: 10px;
+            padding: 12px;
+            border-radius: 16px;
+            border: none;
+            background: #e0e0e0;
+            box-shadow: inset 5px 5px 10px #bebebe,
+                inset -5px -5px 10px #ffffff;
+            font-size: 15px;
+            width: 400px;
+        
+
+}
+.textoPregunta:focus {
+        outline: none;
+        box-shadow: inset 2px 2px 5px #bebebe,
+            inset -2px -2px 5px #ffffff;
+        
+}
+
+.botonEnviar{
+    border-radius: 90%;
+    position: relative;
+    top: 60px;
+    left:0px;
+    width: 200px;
+
+}
+
+.alaskaimg{
+position: relative;
+top:0px;
+
+}
+.respuesta{
+
+    position: relative;
+    top:-650px;
+    left: 350px;
+        max-width: 500px;
+        padding: 20px;
+        background: #ffffff;
+        border: 3px solid #333;
+        border-radius: 50% / 40%;
+        font-family: 'Comic Sans MS', 'Arial', sans-serif;
+        font-size: 14px;
+        color: #222;
+        text-align: center;
+        box-shadow: 4px 4px 0 #000;
+        margin: 40px auto;
+        animation: flotar 2s ease-in-out infinite;
+}
+.respuesta::before,
+.respuesta::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border: 3px solid #333;
+    border-radius: 50%;
+    box-shadow: 2px 2px 0 #000;
+}
+
+.respuesta::before {
+    width: 20px;
+    height: 20px;
+    bottom: -25px;
+    left: 30px;
+}
+
+.respuesta::after {
+    width: 12px;
+    height: 12px;
+    bottom: -40px;
+    left: 20px;
+}
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    } }

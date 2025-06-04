@@ -1,0 +1,20 @@
+# ⚠️ Ignora dependencias
+node_modules/
+.cache/
+
+# ⚠️ Ignora archivos de producción
+dist/
+build/
+
+# ⚠️ Ignora configuraciones locales
+.env
+.env.*.local
+.DS_Store
+*.log
+*.lock
+*.zip
+
+# ⚠️ Ignora archivos de IDE/editor
+.vscode/
+.idea/
+*.swp

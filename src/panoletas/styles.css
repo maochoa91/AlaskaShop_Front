@@ -1,0 +1,136 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.app-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 80px;
+
+    
+}
+
+.controls-container {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #eee;
+}
+
+.controls-container h2,
+.preview-container h2 {
+    margin-top: 0;
+    color: #555;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.control-group input[type="color"],
+.control-group input[type="text"],
+.control-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.control-group input[type="color"] {
+    height: 40px;
+}
+
+.preview-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+.cuadricula{
+    width: 800px;
+        height: 400px;
+        background-image:
+            repeating-linear-gradient(to right, rgba(0, 0, 0, 0.1) 0 1px, transparent 1px 8px),
+            repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0 1px, transparent 1px 8px);
+        background-size: 40px 40px;
+        z-index: 2;
+}
+
+.bandana-wrapper {
+   
+    width: 500px;
+    height: 250px;
+    clip-path: polygon(0% 0%, 100% 00%, 50% 100%);
+    margin-bottom: 100px;
+   
+    
+    
+}
+
+.bandana-text {
+    position: absolute;
+    font-size: 24px;
+    /* Ajusta según necesites */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    word-break: break-word;
+}
+
+/* Estilos de patrones básicos (puedes usar URLs a imágenes SVG/PNG para patrones más complejos) */
+.pattern-dots {
+    background-image: radial-gradient(circle, var(--pattern-color, #000) 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+.pattern-stripes {
+    background-image: linear-gradient(45deg, var(--pattern-color, #000) 25%, transparent 25%, transparent 50%, var(--pattern-color, #000) 50%, var(--pattern-color, #000) 75%, transparent 75%, transparent);
+    background-size: 20px 20px;
+}
+
+.pattern-paisley {
+    /* Un paisley simple con CSS es difícil, idealmente usarías una imagen */
+    /* Esto es solo un placeholder */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30' viewBox='0 0 60 30'%3E%3Cpath d='M15 0 Q0 15 15 30 Q30 15 15 0 M45 0 Q30 15 45 30 Q60 15 45 0 Z' fill='%23000000' fill-opacity='0.2'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed; }

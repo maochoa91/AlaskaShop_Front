@@ -1,0 +1,414 @@
+.preview-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preview-container h2 {
+    color: #555;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.pet-tag-2d {
+    width: 200px;
+    /* Tamaño base de la placa */
+    height: 200px;
+    background-color: #ddd;
+    /* Color base de la placa */
+    /*border: 2px solid #aaa;*/
+    position: relative;
+    
+    /* Para que el contenido no se salga */
+}
+
+/* Formas de la placa */
+/*Circulo*/
+.pet-tag-2d.circle {
+    --gradient: linear-gradient(limegreen, darkgreen);
+        size: 200px;
+        border-radius: 50%;
+        display: flex;
+        background: var(--gradient);
+        
+       
+}
+/*Mikey*/
+.pet-tag-2d.Mikey {
+    
+        position: relative;
+        top:80px;
+        size: 200px;
+        background: rgb(172, 21, 21);
+        border-radius: 50%;
+ }
+ .pet-tag-2d.Mikey span {
+     position: absolute;
+     top: -80px;
+     left: -80px;
+     width: 150px;
+     height: 150px;
+     border-radius: 50%;
+     background-color: rgb(172, 21, 21);
+
+ }
+ .pet-tag-2d.Mikey span:first-child {
+     color: rgb(172, 21, 21);
+     left: 120px;
+     
+ }
+/*Hoja*/
+.pet-tag-2d.globe {
+    --size: 200px;
+    --gradient: linear-gradient(limegreen, darkgreen);
+    
+        background: var(--gradient);
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50% 0 50% 0;
+}
+/*Gota*/
+.pet-tag-2d.gota {
+        position: relative;
+        border-radius: 50%;
+        background-color: #279bdf;
+        top: 80px;
+        
+}
+.pet-tag-2d.gota span {
+    position: absolute;
+    top: -80px;
+    left: 1px;
+    width: 198px;
+    height: 230px;
+    clip-path: polygon(50% 0, 97% 62%, 98% 65%, 100% 80%, 0 80%, 2% 65%, 3% 62%);
+    background-color: #279bdf;
+
+}
+/*Hueso*/
+.pet-tag-2d.bone {
+    position: relative;
+    border-radius: 30px;
+    top:100px;
+    width: 250px;
+    height: 100px;
+    /* Esto requeriría un SVG o una imagen de fondo para una forma de hueso precisa */
+    /* Para simplificar, lo haré con border-radius y padding */
+    background-color: #a39e9e;
+        
+}
+.pet-tag-2d.bone span {
+    position: absolute;
+    top: -45px;
+    left: -50px;
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #a39e9e;
+
+}
+
+.pet-tag-2d.bone span:first-child {
+    color: #a39e9e;
+    left: -50px;
+    top: 45%;
+}
+.pet-tag-2d.bone span:nth-child(2) {
+    color: #a39e9e;
+    left: 200px;
+    top: 45%;
+}
+.pet-tag-2d.bone span:nth-child(3) {
+    color: #a39e9e;
+    left: 200px;
+    top: -45%;
+}
+
+
+
+/*Corazon*/
+.pet-tag-2d.heart {
+    
+        width: 200px;
+        height: 200px;
+        transform: rotate(-45deg);
+        background: red;
+        position: relative;
+        animation: heart 0.6s linear infinite;
+        display: flex;
+        top: 100px;
+}  
+.pet-tag-2d.heart p  {
+
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    transform: rotate(45deg) translate(0,-50px);
+}
+.pet-tag-2d.heart svg {
+
+    transform: rotate(45deg);
+}
+.pet-tag-2d.heart::before{
+    content:"";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color:red;
+    top:-50%;
+    border-radius: 100px;
+
+}
+.pet-tag-2d.heart::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    right: -50%;
+    border-radius: 100px;
+
+}
+
+/*Huella*/
+.pet-tag-2d.huella {
+
+    position: relative;
+    top: 80px;
+    width: 200px;
+    height: 150px;
+    background: rgb(21, 31, 172);
+    border-radius: 50%;
+}
+
+.pet-tag-2d.huella span {
+    position: absolute;
+    top: -40px;
+    left: -30px;
+    width: 80px;
+    height: 120px;
+    border-radius: 100%;
+    transform: rotate(-20deg);
+    background-color: rgb(21, 31, 172);
+
+}
+
+.pet-tag-2d.huella span:first-child {
+    
+    left: 150px;
+    transform: rotate(20deg);
+
+}
+.pet-tag-2d.huella span:nth-child(2) {
+
+    transform: rotate(-5deg);
+    left: 25px;
+    top: -90px;
+}
+.pet-tag-2d.huella span:nth-child(3) {
+
+    transform: rotate(5deg);
+    left: 100px;
+    top: -90px;
+}
+.pet-tag-2d.huella span:nth-child(4) {
+    background-color: #5e82e6;
+    transform: rotate(5deg);
+    width: 50px;
+    height: 80px;
+    left: 115px;
+    top: -70px;
+}
+.pet-tag-2d.huella span:nth-child(5) {
+    background-color: #5e82e6;
+    transform: rotate(-5deg);
+    width: 50px;
+    height: 80px;
+    left: 43px;
+    top: -70px;
+    z-index: 2;
+}
+.pet-tag-2d.huella span:nth-child(6) {
+    background-color: #5e82e6;
+    transform: rotate(15deg);
+    width: 50px;
+    height: 80px;
+    top: -25px;
+    left: 168px;
+}
+.pet-tag-2d.huella span:nth-child(7) {
+    
+    background-color: #5e82e6;
+    transform: rotate(-15deg);
+    width: 50px;
+    height: 80px;
+    top: -25px;
+    left: -20px;
+    z-index: 2;
+}
+
+.pet-tag-2d.huella span:nth-child(8) {
+
+    background-color: #5e82e6;
+    transform: rotate(0deg);
+    width: 160px;
+    height: 120px;
+    top: 25px;
+    left: 20px;
+    z-index: 1;
+}
+/*huevo*/
+.pet-tag-2d.huevo {
+    --size: 200px;
+        --half-size: calc(var(--size) / 2);
+        --gradient: linear-gradient(#e3b882, #3f2a10);
+    
+        width: var(--size);
+        height: calc(var(--size)* 1.35);
+        background: var(--gradient);
+        border-radius: 50% / 65% 65% var(--half-size) var(--half-size);
+
+}
+/*luna*/
+.pet-tag-2d.luna {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #9fb0df;
+    box-shadow: 0 0 20px #fff,
+                inset -50px 0 30px #585858,
+                inset 40px 10px 90px #f6fbfb;
+
+    
+ }
+
+ .pet-tag-2d.luna span{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+
+ }
+ .pet-tag-2d.luna span:first-child {
+
+    border: solid 4px rgba(121,121,121,.7);
+    border-right: solid 0px transparent;
+    border-top: 0px transparent;
+    left: 20px;
+    top:50%;
+ }
+ .pet-tag-2d.luna span:nth-child(2) {
+
+     border: solid 4px rgba(121, 121, 121, .7);
+     border-right: solid 0px transparent;
+     border-top: 0px transparent;
+     left: 100px;
+     top: 10%;
+ }
+ .pet-tag-2d.luna span:nth-child(3) {
+
+    width: 60px;
+    height: 60px;
+     border: solid 4px rgba(121, 121, 121, .7);
+     border-right: solid 0px transparent;
+     border-top: 0px transparent;
+     left: 50%;
+     top: 50%;
+ }
+ .pet-tag-2d.luna span:nth-child(4) {
+
+     border: solid 4px rgba(121, 121, 121, .7);
+     border-right: solid 0px transparent;
+     border-top: 0px transparent;
+     left: 40%;
+     top: 85%;
+ }
+
+/* Contenido de la placa */
+.tag-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    /* Oculta la cara trasera al voltear */
+}
+
+.front-face {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.back-face {
+    transform: rotateY(180deg);
+    z-index: 1;
+    /* Para que se vea el texto en la parte trasera cuando se volteé */
+}
+
+/* Animación de volteo (opcional) */
+.pet-tag-2d {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    /* Para indicar que se puede interactuar */
+}
+
+.pet-tag-2d:hover {
+    transform: rotateY(180deg);
+    /* Voltear al pasar el mouse */
+}
+
+
+.tag-figure {
+    margin-bottom: 10px;
+    font-size: 3em;
+    /* Tamaño del icono */
+    color: #666;
+}
+
+.figure-svg {
+    width: 50px;
+    /* Ajusta el tamaño de tu SVG */
+    height: 50px;
+}
+
+.tag-text-front {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0 10px;
+    word-wrap: break-word;
+    /* Para nombres largos */
+}
+
+.tag-text-back {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 0 10px;
+    word-wrap: break-word;
+    line-height: 1.3;
+}
+
+/* Estilos para el visor 3D (si se implementa) */
+.pet-tag-3d-viewer {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 30px;
+    background-color: #e0e0e0; 
+}
+
+
+       
