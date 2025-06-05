@@ -19,7 +19,7 @@ function Home() {
         }}/>
       <div className='asistente'>
           <AsistenteGemini />
-          <GeneradorPanoleta/>
+          
 
       </div>
         
